@@ -42,9 +42,9 @@ from extract import get_features
 stemmer = PorterStemmer()
 redis_params = dj_database_url.parse(os.environ.get('REDISTOGO_URL'))
 cache = redis.Redis(
-    host='redis://%s:%s@%s' % (redis_params['USER'], redis_params['PASSWORD'], redis_params['HOST']),
-    port=int(redis_params['PORT']),
-    db=0
+    host=redis_params['HOST'],
+    password=redis_params['PASSWORD'],
+    port=redis_params['PORT'],
     )
 
 
