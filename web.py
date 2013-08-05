@@ -15,13 +15,13 @@ def parse_input():
     return (text, choices)
 
 
-@app.route('/choose.json')
+@app.route('/choose.json', methods=['GET', 'POST'])
 def choose_endpoint():
     (text, choices) = parse_input()
     return json.dumps(choose(text, from_list=choices)), 200
 
 
-@app.route('/rank.json')
+@app.route('/rank.json', methods=['GET', 'POST'])
 def rank_endpoint():
     (text, choices) = parse_input()
     return json.dumps(rank(text, from_list=choices)), 200
