@@ -5,7 +5,7 @@ import json
 from solver import choose, rank
 from flask import Flask
 app = Flask(__name__)
-app.config.DEBUG = True if os.environ.get('DEBUG', False) == 'True' else False
+app.config['DEBUG'] = True if os.environ.get('DEBUG', False) == 'True' else False
 
 
 @app.route('/choose.json')
