@@ -1,9 +1,9 @@
 http://pyyaml.org/download/pyyaml/PyYAML-3.10.tar.gz
-# http://pypi.python.org/packages/source/n/nltk/nltk-2.0.1rc4.zip
-# scipy
-# redis
-# requests
-# pyquery
-#
-# flask
-# gunicorn
+http://pypi.python.org/packages/source/n/nltk/nltk-2.0.1rc4.zip
+scipy
+redis
+requests
+pyquery
+
+flask
+gunicorn
