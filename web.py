@@ -9,8 +9,8 @@ app.config['DEBUG'] = True if os.environ.get('DEBUG', False) == 'True' else Fals
 
 
 def parse_input():
-    text = request.args.get('text')
-    choices = request.args.get('choices', '')
+    text = request.values.get('text')
+    choices = request.values.get('choices', '')
     choices = re.split(r', ?', choices)
     return (text, choices)
 
