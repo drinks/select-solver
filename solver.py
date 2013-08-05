@@ -20,7 +20,7 @@ for pair in distances:
     print '%s: %s' % (pair[1], pair[0])
 
 """
-
+import os
 import nltk
 import re
 import json
