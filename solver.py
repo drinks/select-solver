@@ -115,7 +115,6 @@ def build_reference_featureset(terms):
     for term in normalized_terms:
         cached = cache.get(term)
         if cached:
-
             featureset[term] = pickle.loads(cached)
             continue
         try:
@@ -126,7 +125,9 @@ def build_reference_featureset(terms):
         except KeyError, e:
             if "The page you specified doesn't exist" in e:
                 print "Skipping %s, no page." % term
-                continue
+            else:
+                print "KeyError: %s" % e
+            continue
         features = get_features(text, 1000)
         cache.set(term, pickle.dumps(features))
         featureset[term] = features
