@@ -1,4 +1,5 @@
 *.pkl
+!tagger/data/dict.pkl
 *.pyc
 *.pyo
 .DS_Store
