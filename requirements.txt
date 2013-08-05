@@ -8,5 +8,6 @@ redis
 requests
 pyquery
 
+dj_database_url
 flask
 gunicorn
